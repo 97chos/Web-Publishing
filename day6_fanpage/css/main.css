@@ -1,0 +1,1153 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Vladimir+Script&display=swap');
+/*Reset Css*/
+* { margin: 0; padding: 0; }
+ol,ul,li { list-style: none; }
+body { 
+	background:#000;
+	color: #000;
+	font-family: 'Open Sans Condensed', 'Noto Sans KR';
+}
+a { outline: 0; text-decoration: none; color: #222;}
+img { border: 0; }
+
+html {
+	position: relative;
+}
+html:after {
+	background: url('../img/main/main.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	content: "";
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	animation: ani1 1s 1 alternate forwards;
+	animation-delay: 2.5s;
+	z-index: 0;
+	/*overflow: hidden;*/
+}
+header {
+	position: relative;
+	/*width: 100%;*/
+}
+
+@keyframes ani1 {
+	0% {
+		opacity: 0;	
+	}
+	100% {
+		opacity: 1;
+	}	
+}
+header .sns {
+	position: absolute;
+	z-index: 230;
+	right: 3%;
+	top: 3%;
+	opacity: 0;
+}
+header .sns li {
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+header .sns li a {
+	font-size: 40px;
+	color: #fff;
+}
+header .logo {
+	position: fixed;
+	top: 0;
+	left: 100px;
+	z-index: 20;
+}
+header .logo img {
+	width: 90px;
+	height: auto;
+}
+header .slogun {
+	position: relative;
+	top: 20px;
+	left: 25%;
+	width: 1000px;
+	display: inline-block;
+	font-family: "Vladimir Script";
+	color: #fff;
+	font-size: 280px;
+	text-shadow: 1px 1px 10px #000;
+	z-index: 10;
+}
+header .slogun span {
+	position: absolute;
+	opacity: 0;
+	animation: ani2 1.8s 1 alternate forwards;
+} 
+header .slogun span:nth-child(1) {
+  	animation-delay: 0s;
+}
+header .slogun span:nth-child(2) {
+	left: 180px;
+	animation-delay: 0.2s;
+}
+header .slogun span:nth-child(3) {
+	left: 250px;
+	animation-delay: 0.4s;
+}
+header .slogun span:nth-child(4) {
+	left: 370px;
+	animation-delay: 0.6s;
+}
+header .slogun span:nth-child(5) {
+	top: 200px;
+	left: 200px;
+	animation-delay: 0.8s;
+}
+header .slogun span:nth-child(6) {
+	top: 200px;
+	left: 310px;
+	animation-delay: 1.0s;
+}
+header .slogun span:nth-child(7) {
+	top: 200px;
+	left: 400px;
+	animation-delay: 1.2s;
+}
+header .slogun span:nth-child(8) {
+	top: 200px;
+	left: 510px;
+	animation-delay: 1.4s;
+}
+header .slogun span:nth-child(9) {
+	top: 200px;
+	left: 580px;
+	animation-delay: 1.6s;
+}
+@keyframes ani2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header #menu {
+	position: relative;
+	top: 3%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 80%;
+	z-index: 11;
+	text-align: center;
+}
+header #menu:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+header #menu>li {
+	display: inline-block;
+	width: 17%;
+	font-size: 25px;
+	text-align: center;
+	letter-spacing: 3px;
+	transition: all 1s;
+	height: 110%;
+	overflow: hidden;
+	margin-right: 3%;
+	color: #fff;
+	opacity: 0;
+	position: relative;
+}
+header #menu>li:nth-child(5) {
+	margin: 0;
+}
+header #menu>li>h3 {
+	text-align: center;
+}
+header #menu>li>h3>a {
+	margin-top: 20px;
+	display: inline-block;
+	width: 200px;
+	height: 750px;
+	transition: all 0.3s;
+}
+header #menu a {
+	color: #fff;
+}
+header #menu>li:nth-child(1) {
+	background: url(../img/main/sungjin.png) -150px 0;
+	background-size: cover;
+	animation-delay: 3s;
+}
+header #menu>li:nth-child(2) {
+	background: url(../img/main/jae.png) -150px 0;
+	background-size: cover;
+	animation-delay: 3.2s;
+}
+
+header #menu>li:nth-child(3) {
+	background: url(../img/main/youngk.png) -150px 0;
+	background-size: cover;
+	animation-delay: 3.4s;
+}
+
+header #menu>li:nth-child(4) {
+	background: url(../img/main/wonpil.jpg) -120px 0;
+	background-size: cover;
+	animation-delay: 3.5s;
+}
+
+header #menu>li:nth-child(5) {
+	background: url(../img/main/dowoon.jpg) -100px 0;
+	background-size: cover;
+	animation-delay: 3.6s;
+}
+
+section {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+section>h1 {
+	text-align: center;
+	top: 20px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #000;
+	letter-spacing: 5px;
+	position: relative;
+	z-index: 20;
+	height: 0;
+}
+.profile {
+	position: relative;
+	z-index: 10;
+	background: url(../img/profile/bg.jpg) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.profile .introduce {
+	width: 87%;
+	margin: 0 auto;
+}
+.profile .introduce:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.profile .introduce .day6img {
+	margin-top: 100px;
+	width: 38%;
+	float: left;
+}
+.profile .introduce .day6img img {
+	width: 100%;
+}
+.profile .introduce .about {
+	margin-top: 100px;
+	width: 60%;
+	float: right;
+}
+.profile .introduce .about .day6 h2 {
+	letter-spacing: 3px;
+}
+.profile .introduce .about p {
+	letter-spacing: 2px;
+	white-space: pre-line;
+	word-break: keep-all;
+}
+.profile .introduce .award {
+	margin-top: 30px;
+	width: 60%;
+	float: right;
+}
+.profile .introduce .award div {
+	white-space: pre-line;
+	font-size: 20px;
+}
+.profile .list {
+	width: 30%;
+	position: absolute;
+	bottom: 0%;
+	left: 6.5%;
+	padding: 50px 0 10px ; 
+	box-sizing: border-box;
+	text-align: center;
+}
+.profile .list li {
+	display: inline-block;
+	width: 20%;
+	margin-bottom: 10px;
+	margin-left: 5%;
+}
+.profile .list li img {
+	width: 100%;
+}
+.profile .identify {
+	text-align: center;
+}
+.profile .identify .member {
+	position: absolute;
+	bottom: 80px;
+	left: 70%;
+	transform: translateX(-50%);
+	width: 50%;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: all 0.3s;
+}
+.profile .identify .member .text {
+	padding: 50px 0px 50px 50px;
+	color: #fff;
+	margin: 50px 30px 0 0;
+}
+.profile .identify .member .text dl {
+	margin-bottom: 20px;
+}
+.profile .identify .member .text .name dt {
+	font-size: 40px;
+	display: inline-block;
+}
+.profile .identify .member .text .name dd {
+	display: inline-block;
+	font-size: 30px;
+	margin-left: 20px;
+}
+.profile .identify .member .text .birth dt {
+	font-size: 30px;
+	display: inline-block;
+}
+.profile .identify .member .text .birth dd {
+	font-size: 30px;
+	display: inline-block;
+	margin-left: 20px;
+}
+.profile .identify .member .text .position dt {
+	font-size: 30px;
+	display: inline-block;
+}
+.profile .identify .member .text .position dd {
+	font-size: 30px;
+	display: inline-block;
+	margin-left: 20px;
+}
+.profile .identify .member .exit {
+	display: none;
+}
+.profile .identify .member img {
+	width: 40%;
+	float: left;
+}
+.profile .identify .member:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.discography {
+	background: url(../img/discography/bg.jpg)no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.discography h1 {
+	color: #fff;
+}
+.discography .album {
+	position: relative;
+	width: 100%;
+	top: 10%;
+}
+.discography .album .albumList {
+	position: absolute;
+	width: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
+	text-align: center;
+}
+.discography .album .albumList li {
+	float: left;
+	width: 12.5%;
+	height: 200px;
+	margin: 10px;
+}
+.discography .album .albumList li a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+.discography .album .albumList li a img {
+	width: 100%;
+}
+.discography .album .albumList li a .caption {
+	position: absolute;
+	bottom: 3%;
+	width: 100%;
+	text-align: center;
+	z-index: 10;
+	background: rgba(255,255,255,0.5);
+	opacity: 0;
+	font-weight: bold;
+	transition: all 0.3s;
+}
+.discography .album .albumList li a:hover .caption {
+	opacity: 1;
+}
+.discography .music .popup-content {
+	width: 85%;
+	height: 90%;
+	position: absolute;
+	top: 5%;
+	left: 100px;
+	z-index: 32;
+	overflow: hidden;
+}
+.discography .music .popup-content .background {
+	width: 100%;
+	height: 1500px;
+	position: relative;	
+	top: 0;
+}
+.discography #gravity .background {
+	background: url(../img/discography/gra.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #youth2 .background {
+	background: url(../img/discography/youth2_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #beautiful .background {
+	background: url(../img/discography/feeling_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #shootme .background {
+	background: url(../img/discography/youth_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #moonrise .background {
+	background: url(../img/discography/moonrise_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed11 .background {
+	background: url(../img/discography/ed11_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed10 .background {
+	background: url(../img/discography/ed10_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed9 .background {
+	background: url(../img/discography/ed9_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed8 .background {
+	background: url(../img/discography/ed8_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed7 .background {
+	background: url(../img/discography/ed7_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #sunrise .background {
+	background: url(../img/discography/sunrise_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed5 .background {
+	background: url(../img/discography/ed5_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed4 .background {
+	background: url(../img/discography/ed4_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed3 .background {
+	background: url(../img/discography/ed3_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed2 .background {
+	background: url(../img/discography/ed2_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #ed1 .background {
+	background: url(../img/discography/ed1_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #daydream .background {
+	background: url(../img/discography/daydream_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography #theday .background {
+	background: url(../img/discography/theday_bg.png) center center no-repeat;
+	background-size: cover;
+}
+.discography .music .background img {
+	width: 20%;
+	position: absolute;
+	top: 7%;
+	left: 5%;
+}
+.discography .music .background .trackList {
+	position: absolute;
+	top: 7%;
+	width: 350px;
+	left: 30%;
+	color: #fff;
+	height: 70%;
+}
+
+.discography .music .background .trackList h3 {
+	margin-bottom: 10px;
+	font-size: 30px;
+	letter-spacing: 3px;
+}
+.discography .music .background .trackList .track {
+	display:flex; 									/*ul li 순서 정렬 구문*/
+	align-content:flex-start; 
+	flex-direction:column; 
+	flex-wrap:wrap; 
+	overflow: auto;
+	height: 50%;
+}
+.discography .music .background .trackList li {
+	margin-bottom: 10px;
+	font-size: 18px;
+	width: 250px;
+}
+.discography .music#moonrise .background .trackList li {
+	width: 160px;
+}
+.discography .music .description {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40%;
+	height: 100%;
+	overflow: auto;
+	line-height: 2em;
+	white-space: pre-line;
+	padding: 0 20px 20px 0px;
+}
+.discography .music .mask {  
+    position:absolute;  
+    z-index:20;  
+    background: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 100%; 
+    /*display:none;  */
+    left:0;
+    top:0;
+} 
+.discography .music {
+    display: none;
+    position:absolute;  
+    width:100%;
+    height:100%;
+    z-index:300;   
+    overflow: hidden;
+}
+.discography .music .close {
+	position: absolute;
+	bottom: 150px;
+	left: 5%;
+	font-size: 30px;
+	color: #fff;
+	display: none;
+}
+.gallery {
+	background: url(../img/gallery/bg.jpg) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.gallery h1 {
+	color: #fff;
+}
+.gallery .gallerywrap {
+	top: 110px;
+	width: 90%;
+	margin: 0 auto;
+}
+.gallery .gallerywrap a {
+	float: left;
+	display: block;
+	border: 2px solid #fff;
+	margin: 2px;
+	overflow: hidden;
+	width: 15%;
+}
+.gallery .gallerywrap:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.gallery .gallerywrap a .gImg {
+	width: 100%;
+	margin-bottom: -4.5px;
+}
+
+.gallery .gallerywrap a span {
+	background: url(../img/gallery/opacity.png) center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.5s;	
+}
+.gallery .gallerywrap a>img {
+	transform: scale(1);
+	transition: all 0.5s;
+	/*display: none;*/
+}
+.gallery .gallerywrap a:hover span{
+	opacity: 1;
+}
+.gallery .gallerywrap a:hover img {
+	transform: scale(1.1);
+}
+.video {
+	background: url(../img/video/bg.png) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.video h1 {
+	color: #fff;
+}
+.video .video-wrap {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+.video .video-wrap div {
+	display: none;
+}
+.video .video-wrap div.on {
+	text-align: center;
+	display: block;
+	position: relative;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.video .video-list {
+	position: absolute;
+	bottom: 30px;
+	width: 80%;
+	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.video .video-list li {
+	display: inline-block;
+	margin: 5px 10px;
+	width: 7%;
+}
+.video .video-list li a {
+	width: 100%;
+}
+.video .video-list li a img {
+	width: 100%;
+}
+.notice {
+	width: 100%;
+	overflow: hidden;
+}
+.notice .notice-wrap {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.5);
+}
+.notice .notice-wrap:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.notice .notice-wrap .notice-on {
+	width: 50%;
+	height: 80%;
+	float: left;
+	margin-left: 10%;
+	margin-top: 7%;
+	border-bottom: 2px solid #000;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.notice .notice-wrap .notice-on .title {
+	font-size: 30px;
+	padding-bottom: 20px;
+	border-top:2px solid #000;
+	width: 100%;
+}
+.notice .notice-wrap .notice-on .title p,
+.notice .notice-wrap .notice-on .title h5 {
+	display: inline-block;
+}
+.notice .notice-wrap .notice-on .title em {
+	font-size: 20px;
+	/*float: right;*/
+	font-style: normal;
+	vertical-align: bottom;
+}
+.notice .notice-wrap .notice-on .substance img {
+	width: 50%;
+}
+.notice .notice-wrap .notice-list {
+	position: absolute;
+	top: 25%;
+	right: 10%;
+	display: inline-block;
+	border-top: 2px solid #000;
+	padding-top: 10px;
+}
+.notice .notice-wrap .notice-list li {
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #000;
+	width: 500px;
+	padding: 5px 0;
+	font-size: 20px;
+}
+.notice .notice-wrap .notice-list li a {
+	font-weight: bold;
+	margin-left: 20px;
+}
+.notice .notice-wrap .notice-list li a:hover {
+	text-decoration: underline;
+}
+.notice .notice-wrap .notice-list li p {
+	display: inline-block;
+	float: right;
+}
+.notice .notice-wrap .indi {
+	position: absolute;
+	bottom: 10%;
+	right: 380px;
+	font-size: 30px;
+}
+.notice .notice-wrap .indi a.active {
+	border-bottom: 2px solid #333;
+	font-weight: bold;
+}
+@media screen and (max-width: 721px) {
+	header {
+		z-index: 100;
+		background: url(../img/main/mobile.jpg) no-repeat;
+		background-size: cover;
+	}
+	header .slogun {
+		display: none;
+	}
+	header .logo {
+		width: 100%;
+		background-color: #000;
+		left: 0;
+		box-shadow: 1px 1px 5px rgba(255,255,255,0.25);
+		padding-top: 1%;
+		height: 7%;
+	}
+	header .logo h1 {
+		text-align: center;
+	}
+	header .logo h1 img {
+		content: url(../img/small_logo.png);
+	}
+	header #menu {
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 7%;
+	}
+	header #menu>li {
+		width: 100%;
+		height: 80px;
+		opacity: 1;
+		border-bottom: 1px solid rgba(255,255,255,0.25);
+	}
+	header #menu>li:nth-child(1) {
+	background: none;
+	}
+	header #menu>li:nth-child(2) {
+		background: none;
+	}
+	header #menu>li:nth-child(3) {
+		background: none;
+	}
+	header #menu>li:nth-child(4) {
+		background: none;
+	}
+	header #menu>li:nth-child(5) {
+		background: none;
+	}
+	section>h1 {
+		top: 50px;
+		display: none;
+	}
+	.profile {
+		background: url(../img/profile/bg.jpg) center center no-repeat;
+	}
+	.profile .introduce {
+		width: 100%;
+	}
+	.profile .introduce .day6img {
+		display: none;
+	}
+	.profile .introduce .about {
+		padding-top: 15%;
+		width: 95%;
+		margin: 0 auto;
+		float: none;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #555;
+		font-size: 0.8em;
+	}
+	.profile .introduce .award {
+		width: 95%;
+		margin: 0 auto;
+		font-size: 0.8em;
+	}
+	.profile .list {
+		width: 100%;
+		left: 50%;
+		bottom: 0px;
+		transform: translateX(-50%);
+	}
+	.profile .list li {
+		width: 15%;
+		margin: 1%;
+	}
+	.profile .list li a {
+		width: 100%;
+	}
+	.profile .list li a img {
+		width: 100%;
+	}
+	.profile .identify .member {
+		width: 80%;
+		left: 10%;
+		bottom: 250px;
+		transform: none;
+		transition: all 0.5s;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.profile .identify .member .text {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		margin-top: 5%;
+	}
+	.profile .identify .member .text .name dt {
+		font-size: 30px;
+	}
+	.profile .identify .member .text .name dd {
+		font-size: 20px;
+	}
+	.profile .identify .member .text .birth dt {
+		font-size: 20px;
+	}
+	.profile .identify .member .text .birth dd {
+		font-size: 20px;
+	}
+	.profile .identify .member .text .position dd {
+		font-size: 20px;
+	}
+	.profile .identify .member .exit {
+		display: inline-block;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: #d73451;
+		color: #fff;
+		font-weight: bold;
+	}
+	.discography .album {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.discography .album .albumList {
+		border: none;
+		width: 100%;
+		top: 0;
+	}
+	.discography .album .albumList li {
+		width: 100px;
+		height: 100px;
+		margin: 5px;
+		white-space: pre-line;
+	}
+	.discography .album .albumList li:nth-child(1) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(2) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(3) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(4) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(5) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(6) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(7) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(8) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(9) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(10) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(11) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(12) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(13) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(14) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(15) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(16) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(17) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li:nth-child(18) a {
+		background-size: contain;
+	}
+	.discography .album .albumList li a .caption {
+		display: none;
+	}
+	.discography .music .popup-content {
+		width: 100%;
+		left: 0;
+		top: 5%;
+	}
+	.discography .music {
+		border: 4px solid black;
+		position: relative;
+	}
+	.discography #gravity .background {
+		background-size: cover;
+	}
+	.discography #youth2 .background {
+		background-size: cover;
+	}
+	.discography #beautiful .background {
+		background-size: cover;
+	}
+	.discography #shootme .background {
+		background-size: cover;
+	}
+	.discography #moonrise .background {
+		background-size: cover;
+	}
+	.discography #ed11 .background {
+		background-size: cover;
+	}
+	.discography #ed10 .background {
+		background-size: cover;
+	}
+	.discography #ed9 .background {
+		background-size: cover;
+	}
+	.discography #ed8 .background {
+		background-size: cover;
+	}
+	.discography #ed7 .background {
+		background-size: cover;
+	}
+	.discography #sunrise .background {
+		background-size: cover;
+	}
+	.discography #ed5 .background {
+		background-size: cover;
+	}
+	.discography #ed4 .background {
+		background-size: cover;
+	}
+	.discography #ed3 .background {
+		background-size: cover;
+	}
+	.discography #ed2 .background {
+		background-size: cover;
+	}
+	.discography #ed1 .background {
+		background-size: cover;
+	}
+	.discography #daydream .background {
+		background-size: cover;
+	}
+	.discography #theday .background {
+		background-size: cover;
+	}
+	.discography .music .description {
+		top: 60%;
+		left: 0;
+		height: 30%; 
+		width: 100%;
+		border-top: 1px solid #ccc;
+	}
+	.discography .music .background .trackList {
+		top: 50px;
+		left: 30%;
+		width: 70%;
+		height: 45%;
+	}
+	.discography .music .background .trackList li {
+		font-size: 0.9em;
+		width: 140px;
+		/*border: 2px solid red;*/
+		white-space: pre-line;
+	}
+	.discography #youth2 .background .trackList li {
+		width: 160px;
+	}
+	.discography #moonrise .background .trackList {
+		left: 28%;
+	}
+	.discography .music .background img {
+		top: 50px;
+	}
+	.discography .music .close {
+		bottom: 0px;
+		left: 0;
+		font-size: 30px;
+		background: #d73451;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.video .video-list {
+		width: 95%;
+		border-top: 1px solid #ccc;
+		padding-top: 20px;
+	}
+	.video .video-list li {
+		width: 15%;
+		margin: 0;
+	}
+	.video .video-list li a {
+		width: 10%;
+	}
+	.video .video-list li a img {
+		width: 100%;
+	}
+	.gallery .gallerywrap {
+		top: 120px;
+		width: 95%;
+		margin: 0 auto;
+	}
+	.gallery .gallerywrap a {
+		float: left;
+		display: block;
+		border: 2px solid #fff;
+		margin: 2px;
+		overflow: hidden;
+		width: 23%;
+	}
+	.gallery .gallerywrap:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.gallery .gallerywrap a .gImg,
+	.gallery .gallerywrap a .gImg img {
+		width: 100%;
+	}
+
+	.gallery .gallerywrap a span {
+		background: url(../img/gallery/opacity.png) center;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: all 0.5s;	
+	}
+	.gallery .gallerywrap a>img {
+		transform: scale(1);
+		transition: all 0.5s;
+		/*display: none;*/
+	}
+	.gallery .gallerywrap a:hover span{
+		opacity: 1;
+	}
+	.gallery .gallerywrap a:hover img {
+		transform: scale(1.1);
+	}
+	.video .video-wrap div.on iframe {
+		width: 480px;
+		height: 270px;
+	}
+	.video .video-list {
+		width: 95%;
+	}
+	.video .video-list li {
+		width: 15%;
+	}
+	.notice .notice-wrap .notice-on {
+		margin-left: 0;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.notice .notice-wrap .notice-on .title {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.notice .notice-wrap .notice-on {
+		width: 90%;
+		margin: 10% auto;
+		height: auto;
+	}
+	.notice .notice-wrap .notice-list {
+		width: 90%;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 27%;
+		overflow: hidden;
+		top: 63%;
+		border: none;
+	}
+	.notice .notice-wrap .notice-list li {
+		font-size: 15px;
+		width: 100%;
+	}
+	.notice .notice-wrap .indi {
+		right: 50%;
+		transform: translateX(50%);
+		bottom: 3%;
+	}
+
+}
